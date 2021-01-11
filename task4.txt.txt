@@ -1,0 +1,25 @@
+4. Explain how you would make a copy of our production codebase so that you can begin
+developing a new feature from a project plan and how you would share your work with
+the world as production software. Please use exact commands for starting your work,
+preparing for review, and getting it deployed.
+
+Starting with getting the project from thumbstopper repository using git or maven or svn, (in this case git) and then saving the changes.
+
+mkdir project_777
+cd project_777
+git init
+git remote add origin https://thumbstopper.io/repository/project_777
+git pull origin master
+git checkout -b new-feature
+git add *
+git commit -m "some testeable part of new feature"
+git push origin new-feature
+
+Later on i will create a docker file for the respective project settings or just run the project using docker run command as following
+
+docker pull laravel/php
+docker run -p 80 -v ./project_777:/app laravel/php
+
+Its of course depend on project settings, framework, architecture, because a more complex project maybe with a database on postgres, api 
+
+
