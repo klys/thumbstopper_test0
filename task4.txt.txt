@@ -20,6 +20,13 @@ Later on i will create a docker file for the respective project settings or just
 docker pull laravel/php
 docker run -p 80 -v ./project_777:/app laravel/php
 
-Its of course depend on project settings, framework, architecture, because a more complex project maybe with a database on postgres, api 
+Its of course depend on project settings, framework, architecture, which could demand different commands like node commands or compose commands.
+
+example:
+
+yarn start
+npm start
+node start
+php artisan serve
 
 
